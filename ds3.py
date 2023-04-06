@@ -108,8 +108,8 @@
 # v=lambda *i:i**2
 # v(1,2,3) #won't work as tuples can't be squared
  
-a=lambda a,b:(a*b,a+b)
-print(a(4,5))
+# a=lambda a,b:(a*b,a+b)
+# print(a(4,5))
 
 #iterable,iterator
 #iterable means an element which we can access in a sequential manner individually.
@@ -129,11 +129,63 @@ print(a(4,5))
 
 # print(next(s))
 
-l=[1,2,3,4,5]
-#list is iterable
-p=iter(l)
-print(next(p))
+# l=[1,2,3,4,5]
+# #list is iterable
+# p=iter(l)
+# print(next(p))#next function always remembers what it has extracted last time
 
 #All iterables are iterator.
+#Unles and untill objects are iterable , u cannot make them iterator
 
-#Generator
+# l=[1,2,3,4,4]
+# #By default list is not iterator
+# l=iter(l)#so we convert it
+# print(next(l))
+# print(next(l))
+# print(next(l))
+# print(next(l))
+# print(next(l))
+# print(next(l))#going beyond limit results in Stop iteration exception
+
+# t=(1,2,3,4)
+# t=iter(t)
+# print(next(t))
+# print(next(t))
+# print(next(t))
+# print(next(t))
+
+# print(list(range(0,15,2)))
+# #Generator
+
+# def genCube(n):
+#     for i in range(n):
+#         return n**3
+    
+# print(genCube(6))    
+
+# def gencube(n):
+#     for i in range(n):
+#         yield(i**3)
+
+# print(gencube(10))
+
+# for i in gencube(9):
+#     print(i)
+
+#for producing the next data , only thing i have to remember is 
+#what was the last element generated ,
+#what is the logic
+#when i have to stop
+#this is what yield will handle while managing memory (it do not have to remember the pas elements generated)
+# def genFibonacci(n):
+#     a=1
+#     b=1
+#     for i in range(n):
+#         yield a,i
+#         a,b=b,a+b
+
+# for i in getFibonacci(30):
+#     print(i)
+
+    
+
