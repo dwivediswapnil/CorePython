@@ -1,5 +1,5 @@
 from PIL import Image,ImageFilter
-img = Image.open('C:\\Users\\swapn\\PycharmProjects\\pythonProject\\imagePlay\\PokeStage\\Pikachu.jpg')
+img = Image.open('./Pikachu.jpg')
 #Changing clarity of image
 # filtered_img = img.filter((ImageFilter.BLUR))
 # filtered_img = img.filter((ImageFilter.SMOOTH))
