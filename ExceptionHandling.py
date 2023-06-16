@@ -72,8 +72,8 @@ logging.basicConfig(filename='test.log',level=logging.INFO,format = '%(asctime)s
 logging.info("This is info log")
 logging.warning("This is my warning log")
 logging.error("This is an error log")
-except Exception as e:
-logging.exception("Exception occured"+str(e))
+# except Exception as e:
+# logging.exception("Exception occured"+str(e))
 
 
 
